@@ -9,3 +9,4 @@ then run your script  $ python Automation.py
 
 ![Image of nodemcu] 
 (https://github.com/vivekaris/firebase-iot/blob/master/node-iot_bb.png)
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
