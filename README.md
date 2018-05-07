@@ -4,4 +4,5 @@ Simple code for firebase realtime database operation using python
 # sudo pip install requests==1.1.0
 # sudo pip install python-firebase
 then run your script  $ python Automation.py
-its simple
+
+# its simple
