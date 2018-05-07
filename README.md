@@ -7,4 +7,4 @@ then run your script  $ python Automation.py
 
 # its simple wiring picture
 
-![Image of node mcu] [[https://github.com/vivekaris/firebase-iot/blob/master/node-iot_bb.png|alt=node mcu python]]
+![Image of node mcu] (https://github.com/vivekaris/firebase-iot/blob/master/node-iot_bb.png|alt=node mcu python)
