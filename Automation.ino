@@ -3,17 +3,17 @@
 #include<FirebaseArduino.h>
 
 // give firebase details
-#define FIREBASE_HOST "firebasedb name"
-#define FIREBASE_AUTH "secret_token"
+#define FIREBASE_HOST "dbname.firebaseio.com"
+#define FIREBASE_AUTH "secret_tokens"
 
 #define WIFI_SSID "SSID"
-#define WIFI_PASSWORD "PSW"                                //Password of your wifi network 
+#define WIFI_PASSWORD "PSW"           //SSID and Password of your wifi network 
 
-#define D2 14 //D2
-int val1;
+#define D2 4 //D2
+int fan;
 
-#define D1 4  //D1
-int val2;
+#define D1 5  //D1
+int light;
 
 void setup() 
 {
@@ -44,7 +44,7 @@ void setup()
 
 void firebasereconnect()
 {
-    Serial.println("Trying to reconnect");
+    Serial.println("Trying to reconnect firebase");
     Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
   }
 
@@ -53,34 +53,34 @@ void loop()
 //if any error in operation
   if (Firebase.failed())
       {
-      Serial.print("failed to connect");
+      Serial.print("failed to connect firebase");
       Serial.println(Firebase.error());
       firebasereconnect();
       return;
       }
       
  
-  val1=Firebase.getString("fan").toInt();     //value  from the firebase          
-  //Serial.println(val1);
-  if(val1==1)                                                             // If, the Status is 1, turn on the PIN
+  fan=Firebase.getString("fan").toInt();     //value  from the firebase          
+  Serial.println(fan);
+  if(fan==1)                                                             // If, the Status is 1, turn on the PIN
      {
        digitalWrite(D2,HIGH);
       Serial.println("FAN ON");
     }
-    else if(val1==0)                                                      // If, the Status is 0, turn Off the PIN
+    else if(fan==0)                                                      // If, the Status is 0, turn Off the PIN
     {                                      
       digitalWrite(D2,LOW);
       Serial.println("Fan 2 OFF");
     }
 
-   val2=Firebase.getString("light").toInt();  //value  from the firebase
-  //Serial.println(val2);
-  if(val2==1)                                    // If, the Status is 1, turn on the PIN
+   light=Firebase.getString("light").toInt();  //value  from the firebase
+  Serial.println(light);
+  if(light==1)                                    // If, the Status is 1, turn on the PIN
      {
       digitalWrite(D1,HIGH);
       Serial.println("Light ON");
     }
-    else if(val2==0)                            // If, the Status is 0, turn Off the PIN
+    else if(light==0)                            // If, the Status is 0, turn Off the PIN
     {                                      
       digitalWrite(D1,LOW);
       Serial.println("light OFF");
