@@ -7,6 +7,5 @@ then run your script  $ python Automation.py
 
 # its simple wiring picture
 
-![Image of nodemcu] 
-(https://github.com/vivekaris/firebase-iot/blob/master/node-iot_bb.png)
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of nodemcu] (https://github.com/vivekaris/firebase-iot/blob/master/node-iot_bb.png)
+
