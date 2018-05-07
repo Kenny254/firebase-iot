@@ -5,4 +5,6 @@ Simple code for firebase realtime database operation using python
 # sudo pip install python-firebase
 then run your script  $ python Automation.py
 
-# its simple
+# its simple wiring picture
+
+[[https://github.com/vivekaris/firebase-iot/blob/master/node-iot_bb.png|alt=node mcu python]]
